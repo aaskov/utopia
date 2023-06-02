@@ -41,7 +41,7 @@ for p in planets:
 # -----------------
 
 # For the Metal Mining ressource
-planets = Planet.objects.filter(metal_mining_next_upgrade__isnull=False)
+planets = Planet.objects.filter(metal_mining_next_upgrade__lte=now)
 for p in planets:
 	# Increase level
 	p.metal_mining_level += 1
@@ -60,7 +60,7 @@ for p in planets:
 
 
 # For the Solar Plant ressource
-planets = Planet.objects.filter(solar_plant_next_upgrade__isnull=False)
+planets = Planet.objects.filter(solar_plant_next_upgrade__lte=now)
 for p in planets:
 	# Increase level
 	p.solar_plant_level += 1
@@ -84,7 +84,7 @@ for p in planets:
 # -----------------
 
 # For the Robotics Factory
-planets = Planet.objects.filter(robotics_factory_next_upgrade__isnull=False)
+planets = Planet.objects.filter(robotics_factory_next_upgrade__lte=now)
 for p in planets:
 	# Increase level
 	p.robotics_factory_level += 1
@@ -100,7 +100,7 @@ for p in planets:
 
 
 # For the Shipyard Dock
-planets = Planet.objects.filter(shipyard_dock_next_upgrade__isnull=False)
+planets = Planet.objects.filter(shipyard_dock_next_upgrade__lte=now)
 for p in planets:
 	# Increase level
 	p.shipyard_dock_level += 1
