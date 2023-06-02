@@ -1,0 +1,66 @@
+{% load static %}
+
+<!-- HEADER -->
+<h1>Shipyard</h1>
+<hr>
+
+<!-- MANUFACTURE SECTION -->
+<h3>Shipyard</h3>
+
+
+<h5>Light Fighter</h5>
+<img src="{% static 'galactic/solar_plant.jpg' %}" style="width:100px;border-radius:5px;">
+<form action="{% url 'galactic:manufacture_shipyard' planet.id %}" method="post">
+    {% csrf_token %}
+    {% if error_message %}
+    <p>
+        <strong>{{ error_message }}</strong>
+    </p>
+    {% endif %}
+    <input type="number" name="amount" value="1">
+    <input type="submit" name="button" value="light_fighter">
+</form>
+
+
+
+<h5>Heavy Fighter</h5>
+<img src="{% static 'galactic/solar_plant.jpg' %}" style="width:100px;border-radius:5px;">
+<form action="{% url 'galactic:manufacture_shipyard' planet.id %}" method="post">
+    {% csrf_token %}
+    {% if error_message %}
+    <p>
+        <strong>{{ error_message }}</strong>
+    </p>
+    {% endif %}
+    <input type="number" name="amount" value="1">
+    <input type="submit" name="button" value="heavy_fighter">
+</form>
+
+
+
+<!-- STATS SECTION FOR SHIPYARD -->
+<hr>
+<h3>Stats</h3>
+
+<ul>
+    <li>Light Fighter:
+    <ul>
+        <li>Count: {{ planet.light_fighter_count }}</li>
+        <li>Next manufacture: {{ planet.light_fighter_next_manufacture }}</li>
+        <li>Manufacture cost (metal): {{ planet.light_fighter_cost_manufacture_metal }}</li>
+        <li>Manufacture time: {{ planet.light_fighter_manufacture_time }}</li>
+        <li>Manufacture amount: {{ planet.light_fighter_manufacture_amount }}</li>
+    </ul>
+    </li> 
+    <p></p>
+    <li>Heavy Fighter:
+    <ul>
+        <li>Count: {{ planet.heavy_fighter_count }}</li>
+        <li>Next manufacture: {{ planet.heavy_fighter_next_manufacture }}</li>
+        <li>Manufacture cost (metal): {{ planet.heavy_fighter_cost_manufacture_metal }}</li>
+        <li>Manufacture time: {{ planet.heavy_fighter_manufacture_time }}</li>
+        <li>Manufacture amount: {{ planet.heavy_fighter_manufacture_amount }}</li>
+    </ul>
+    </li> 
+    <p></p>
+</ul>

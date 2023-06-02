@@ -1,0 +1,64 @@
+{% load static %}
+
+<!-- HEADER -->
+<h1>Ressources</h1>
+<hr>
+
+<!-- UPGRADE SECTION -->
+<h3>Upgrade ressources</h3>
+
+
+<h5>Metal Minining</h5>
+<img src="{% static 'galactic/metal_mining.jpg' %}" style="width:100px;border-radius:5px;">
+<form action="{% url 'galactic:upgrade_ressources' planet.id %}" method="post">
+    {% csrf_token %}
+    {% if error_message %}
+    <p>
+        <strong>{{ error_message }}</strong>
+    </p>
+    {% endif %}
+    <input type="submit" name="button" value="metal_mining">
+</form>
+
+
+<h5>Solar Planet</h5>
+<img src="{% static 'galactic/solar_plant.jpg' %}" style="width:100px;border-radius:5px;">
+<form action="{% url 'galactic:upgrade_ressources' planet.id %}" method="post">
+    {% csrf_token %}
+    {% if error_message %}
+    <p>
+        <strong>{{ error_message }}</strong>
+    </p>
+    {% endif %}
+    <input type="submit" name="button" value="solar_plant">
+</form>
+
+
+
+<!-- STATS SECTION FOR RESSOURCES -->
+<hr>
+<h3>Stats</h3>
+
+<ul>
+    <li>Metal Mining:
+    <ul>
+        <li>Level: {{ planet.metal_mining_level }}</li>
+        <li>Next batch: {{ planet.metal_mining_next_batch }}</li>
+        <li>Next upgrade: {{ planet.metal_mining_next_upgrade }}</li>
+        <li>Energy consumption: {{ planet.metal_mining_energy_consumption }}</li>
+        <li>Production: {{ planet.metal_mining_production }}</li>
+        <li>Upgrade cost (metal): {{ planet.metal_mining_cost_upgrade_metal }}</li>
+        <li>Upgrade time: {{ planet.metal_mining_upgrade_time }}</li>
+    </ul>
+    </li> 
+    <p></p>
+    <li>Solar Plant:
+        <ul>
+            <li>Level: {{ planet.solar_plant_level }}</li>
+            <li>Next upgrade: {{ planet.solar_plant_next_upgrade }}</li>
+            <li>Production: {{ planet.solar_plant_production }}</li>
+            <li>Upgrade cost (metal): {{ planet.solar_plant_cost_upgrade_metal }}</li>
+            <li>Upgrade time: {{ planet.solar_plant_upgrade_time }}</li>
+        </ul>
+    </li>
+</ul>

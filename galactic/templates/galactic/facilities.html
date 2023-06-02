@@ -1,0 +1,60 @@
+{% load static %}
+
+<!-- HEADER -->
+<h1>Facilities</h1>
+<hr>
+
+<!-- UPGRADE SECTION -->
+<h3>Upgrade facilities</h3>
+
+
+<h5>Robotics Factory</h5>
+<img src="{% static 'galactic/metal_mining.jpg' %}" style="width:100px;border-radius:5px;">
+<form action="{% url 'galactic:upgrade_facilities' planet.id %}" method="post">
+    {% csrf_token %}
+    {% if error_message %}
+    <p>
+        <strong>{{ error_message }}</strong>
+    </p>
+    {% endif %}
+    <input type="submit" name="button" value="robotics_factory">
+</form>
+
+
+<h5>Shipyard Dock</h5>
+<img src="{% static 'galactic/metal_mining.jpg' %}" style="width:100px;border-radius:5px;">
+<form action="{% url 'galactic:upgrade_facilities' planet.id %}" method="post">
+    {% csrf_token %}
+    {% if error_message %}
+    <p>
+        <strong>{{ error_message }}</strong>
+    </p>
+    {% endif %}
+    <input type="submit" name="button" value="shipyard_dock">
+</form>
+
+
+<!-- STATS SECTION FOR FACILITIES -->
+<hr>
+<h3>Stats</h3>
+
+<ul>
+    <li>Robotics Factory:
+    <ul>
+        <li>Level: {{ planet.robotics_factory_level }}</li>
+        <li>Next upgrade: {{ planet.robotics_factory_next_upgrade }}</li>
+        <li>Upgrade cost (metal): {{ planet.robotics_factory_cost_upgrade_metal }}</li>
+        <li>Upgrade time: {{ planet.robotics_factory_upgrade_time }}</li>
+    </ul>
+    </li> 
+    <p></p>
+    <li>Shipyard Dock:
+    <ul>
+        <li>Level: {{ planet.shipyard_dock_level }}</li>
+        <li>Next upgrade: {{ planet.shipyard_dock_next_upgrade }}</li>
+        <li>Upgrade cost (metal): {{ planet.shipyard_dock_cost_upgrade_metal }}</li>
+        <li>Upgrade time: {{ planet.shipyard_dock_upgrade_time }}</li>
+    </ul>
+    </li> 
+    <p></p>
+</ul>

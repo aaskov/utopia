@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% load static %}
+    <title>Galactic Utopia</title>    
+</head>
+<body>
+
+<h1>Index</h1>
+{% if latest_planet_list %}
+<ul>
+    {% for planet in latest_planet_list %}
+        <li>
+            <a href="{% url 'galactic:planet' planet.id %}">{{ planet.discovered_date }}</a>
+            <ul>
+                <li>
+                    <a href="{% url 'galactic:ressources' planet.id %}">Ressources</a>
+                </li>
+                <li>
+                    <a href="{% url 'galactic:facilities' planet.id %}">Facilities</a>
+                </li>
+                <li>
+                    <a href="{% url 'galactic:shipyard' planet.id %}">Shipyard</a>
+                </li>
+                <li>
+                    <a href="{% url 'galactic:defence' planet.id %}">Defence</a>
+                </li>
+            </ul>
+        </li>
+    {% endfor %}
+</ul>
+{% else %}
+<p>No planets are discovered.</p>
+{% endif %}
+
+</body>
+</html>

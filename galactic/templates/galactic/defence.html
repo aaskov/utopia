@@ -1,0 +1,66 @@
+{% load static %}
+
+<!-- HEADER -->
+<h1>Defence</h1>
+<hr>
+
+<!-- MANUFACTURE SECTION -->
+<h3>Defence</h3>
+
+
+<h5>Rocket Launcher</h5>
+<img src="{% static 'galactic/solar_plant.jpg' %}" style="width:100px;border-radius:5px;">
+<form action="{% url 'galactic:manufacture_defence' planet.id %}" method="post">
+    {% csrf_token %}
+    {% if error_message %}
+    <p>
+        <strong>{{ error_message }}</strong>
+    </p>
+    {% endif %}
+    <input type="number" name="amount" value="1">
+    <input type="submit" name="button" value="rocket_launcher">
+</form>
+
+
+
+<h5>Light Laser</h5>
+<img src="{% static 'galactic/solar_plant.jpg' %}" style="width:100px;border-radius:5px;">
+<form action="{% url 'galactic:manufacture_defence' planet.id %}" method="post">
+    {% csrf_token %}
+    {% if error_message %}
+    <p>
+        <strong>{{ error_message }}</strong>
+    </p>
+    {% endif %}
+    <input type="number" name="amount" value="1">
+    <input type="submit" name="button" value="light_laser">
+</form>
+
+
+
+<!-- STATS SECTION FOR RESSOURCES -->
+<hr>
+<h3>Stats</h3>
+
+<ul>
+    <li>Rocket Launcher:
+    <ul>
+        <li>Count: {{ planet.rocket_launcher_count }}</li>
+        <li>Next manufacture: {{ planet.rocket_launcher_next_manufacture }}</li>
+        <li>Manufacture cost (metal): {{ planet.rocket_launcher_cost_manufacture_metal }}</li>
+        <li>Manufacture time: {{ planet.rocket_launcher_manufacture_time }}</li>
+        <li>Manufacture amount: {{ planet.rocket_launcher_manufacture_amount }}</li>
+    </ul>
+    </li> 
+    <p></p>
+    <li>Light Laser:
+    <ul>
+        <li>Count: {{ planet.light_laser_count }}</li>
+        <li>Next manufacture: {{ planet.light_laser_next_manufacture }}</li>
+        <li>Manufacture cost (metal): {{ planet.light_laser_cost_manufacture_metal }}</li>
+        <li>Manufacture time: {{ planet.light_laser_manufacture_time }}</li>
+        <li>Manufacture amount: {{ planet.light_laser_manufacture_amount }}</li>
+    </ul>
+    </li> 
+    <p></p>
+</ul>
