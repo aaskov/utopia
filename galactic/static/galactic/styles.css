@@ -1,10 +1,72 @@
-body {
-    color: #777;
+::-moz-selection { /* Code for Firefox */
+  color: white;
+  background: #304B60;
 }
+
+::selection {
+  color: white;
+  background: #304B60;
+}
+
+
+
+html {
+    background-color: #242A2F;
+}
+
+body {
+    color: #C5D6CE;
+}
+
+a {
+    color: #2F5904;
+}
+
+hr {
+    border: 1px solid #3c3c3c;
+}
+
+.showstuff {
+    background-color: #151515;
+    border: 1px solid dimgrey;
+    padding: 25px;
+    border-bottom-right-radius: 5px;
+}
+
+.inventar-table {
+    border: 1px solid #0d4675;
+}
+
+.inventar-table td,
+.inventar-table th {
+    padding: 0px !important;
+    font-style: italic;
+}
+
 
 .pure-img-responsive {
     max-width: 100%;
     height: auto;
+}
+
+.block {
+  display: block;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.container {
+        margin-top: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
 }
 
 /*
@@ -52,7 +114,6 @@ The content `<div>` is where all your content goes.
      color: #333;
      text-align: center;
      padding: 2.5em 2em 0;
-     border-bottom: 1px solid #eee;
  }
     .header h1 {
         margin: 0.2em 0;
@@ -128,7 +189,7 @@ appears on the left side of the page.
     */
     #menu .pure-menu-selected,
     #menu .pure-menu-heading {
-        background: #1f8dd6;
+        background: #023C6A;
     }
         /*
         This styles a link within a selected menu item `<li>`.
