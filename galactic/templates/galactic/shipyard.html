@@ -32,79 +32,142 @@
         </div>
     </div>
 
-    <div id="main">
+
+   <div id="main">
+
+        <div class="header">
+
+
+            <div class="container">
+                <table class="pure-table inventar-table" style="color: white;">
+
+                    <tbody>
+                        <tr>
+                            <td style="background-color: black; border-left: 1px solid #0d4675; border-right: 1px solid #0d4675;"><img src="{% static 'galactic/solar_plant.jpg' %}" style="width: 80px;"></td>
+                            <td style="border-top: 1px solid #242A2F;">&nbsp;</td>
+                            <td style="background-color: black; border-left: 1px solid #0d4675; border-right: 1px solid #0d4675;"><img src="{% static 'galactic/solar_plant.jpg' %}" style="width: 80px;"></td>
+                        </tr>
+                        <tr>
+                            <td style="background-color: black; border-left: 1px solid #0d4675; border-right: 1px solid #0d4675;">{{ planet.energy }}</td>
+                            <td style="border-bottom: 1px solid #242A2F;">&nbsp;</td>
+                            <td style="background-color: black; border-left: 1px solid #0d4675; border-right: 1px solid #0d4675;">{{ planet.metal }}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+
+        </div>
+
 
         <div class="content">
-            <h2 class="content-subhead">shipyard</h2>
 
-            <!-- HEADER -->
-            <h1>Shipyard</h1>
+
+            <p>&nbsp;</p>
             <hr>
 
-            <!-- MANUFACTURE SECTION -->
-            <h3>Shipyard</h3>
+            <p>&nbsp;</p>
+            
+            <span class="showstuff" style="padding: 12px 25px; font-style: italic;">selected item</span>
+
+            <div id="Nature" class="picture showstuff" style="">
+                <div class="pure-g">
+                    <div class="pure-u-2-5">
+                        <img src="{% static 'galactic/metal_mining.jpg' %}" alt="Nature" style="width:85%; border-radius:5px; border: 1px solid #714644;">
+                    </div>
+                    <div class="pure-u-3-5">
+                        <li>Light Fighter:
+                            <ul>
+                                <li>Count: {{ planet.light_fighter_count }}</li>
+                                <li>Next manufacture: {{ planet.light_fighter_next_manufacture }}</li>
+                                <li>Manufacture cost (metal): {{ planet.light_fighter_cost_manufacture_metal }}</li>
+                                <li>Manufacture time: {{ planet.light_fighter_manufacture_time }}</li>
+                                <li>Manufacture amount: {{ planet.light_fighter_manufacture_amount }}</li>
+                            </ul>
+                        </li> 
+                        <form action="{% url 'galactic:manufacture_shipyard' planet.id %}" method="post">
+                            {% csrf_token %}
+                            {% if error_message %}
+                            <p>
+                                <strong>{{ error_message }}</strong>
+                            </p>
+                            {% endif %}
+                            <input type="number" name="amount" value="1">
+                            <input type="submit" name="button" value="light_fighter">
+                        </form>
+                    </div>
+                    <div class="pure-u-1-1">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                    </div>
+                </div>
+            </div>
 
 
-            <h5>Light Fighter</h5>
-            <img src="{% static 'galactic/solar_plant.jpg' %}" style="width:100px;border-radius:5px;">
-            <form action="{% url 'galactic:manufacture_shipyard' planet.id %}" method="post">
-                {% csrf_token %}
-                {% if error_message %}
-                <p>
-                    <strong>{{ error_message }}</strong>
-                </p>
-                {% endif %}
-                <input type="number" name="amount" value="1">
-                <input type="submit" name="button" value="light_fighter">
-            </form>
+            <div id="Snow" class="picture showstuff" style="display:none">
+                <div class="pure-g">
+                    <div class="pure-u-2-5">
+                        <img src="{% static 'galactic/metal_mining.jpg' %}" alt="Snow" style="width:85%; border-radius:5px; border: 1px solid #714644;">
+                    </div>
+                    <div class="pure-u-3-5">
+                        <li>Heavy Fighter:
+                            <ul>
+                                <li>Count: {{ planet.heavy_fighter_count }}</li>
+                                <li>Next manufacture: {{ planet.heavy_fighter_next_manufacture }}</li>
+                                <li>Manufacture cost (metal): {{ planet.heavy_fighter_cost_manufacture_metal }}</li>
+                                <li>Manufacture time: {{ planet.heavy_fighter_manufacture_time }}</li>
+                                <li>Manufacture amount: {{ planet.heavy_fighter_manufacture_amount }}</li>
+                            </ul>
+                        </li> 
+                        <form action="{% url 'galactic:manufacture_shipyard' planet.id %}" method="post">
+                            {% csrf_token %}
+                            {% if error_message %}
+                            <p>
+                                <strong>{{ error_message }}</strong>
+                            </p>
+                            {% endif %}
+                            <input type="number" name="amount" value="1">
+                            <input type="submit" name="button" value="heavy_fighter">
+                        </form>
+                    </div>
+                    <div class="pure-u-1-1">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                    </div>
+                </div>
+            </div>
 
+            <p>&nbsp;</p>
 
-
-            <h5>Heavy Fighter</h5>
-            <img src="{% static 'galactic/solar_plant.jpg' %}" style="width:100px;border-radius:5px;">
-            <form action="{% url 'galactic:manufacture_shipyard' planet.id %}" method="post">
-                {% csrf_token %}
-                {% if error_message %}
-                <p>
-                    <strong>{{ error_message }}</strong>
-                </p>
-                {% endif %}
-                <input type="number" name="amount" value="1">
-                <input type="submit" name="button" value="heavy_fighter">
-            </form>
-
-
-
-            <!-- STATS SECTION FOR SHIPYARD -->
             <hr>
-            <h3>Stats</h3>
 
-            <ul>
-                <li>Light Fighter:
-                <ul>
-                    <li>Count: {{ planet.light_fighter_count }}</li>
-                    <li>Next manufacture: {{ planet.light_fighter_next_manufacture }}</li>
-                    <li>Manufacture cost (metal): {{ planet.light_fighter_cost_manufacture_metal }}</li>
-                    <li>Manufacture time: {{ planet.light_fighter_manufacture_time }}</li>
-                    <li>Manufacture amount: {{ planet.light_fighter_manufacture_amount }}</li>
-                </ul>
-                </li> 
-                <p></p>
-                <li>Heavy Fighter:
-                <ul>
-                    <li>Count: {{ planet.heavy_fighter_count }}</li>
-                    <li>Next manufacture: {{ planet.heavy_fighter_next_manufacture }}</li>
-                    <li>Manufacture cost (metal): {{ planet.heavy_fighter_cost_manufacture_metal }}</li>
-                    <li>Manufacture time: {{ planet.heavy_fighter_manufacture_time }}</li>
-                    <li>Manufacture amount: {{ planet.heavy_fighter_manufacture_amount }}</li>
-                </ul>
-                </li> 
-                <p></p>
-            </ul>
+            <br>
+
+            <span class="showstuff" style="padding: 12px 25px; font-style: italic;">available items</span>
+            <div class="pure-g showstuff">
+                <div class="pure-u-1-4 pure-u-lg-1-8">
+                    <a href="javascript:void(0)" class="w3-hover-opacity" onclick="openImg('Nature');">
+                        <img src="{% static 'galactic/metal_mining.jpg' %}" alt="Nature" style="width:60%; border-radius:5px; border: 1px solid #714644;">
+                    </a>
+                </div>
+                <div class="pure-u-1-4 pure-u-lg-1-8">
+                    <a href="javascript:void(0)" class="w3-hover-opacity" onclick="openImg('Snow');">
+                        <img src="{% static 'galactic/metal_mining.jpg' %}" alt="Snow" style="width:60%; border-radius:5px; border: 1px solid #714644;">
+                    </a>
+                </div>
+            </div>
+
+            <br>
+
+            <hr>
+
+            <p>&nbsp;</p>
+
+            <br>
 
 
         </div>
     </div>
+
+
 </div>
 
 <script src="{% static 'galactic/ui.js' %}"></script>

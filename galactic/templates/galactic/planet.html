@@ -35,21 +35,25 @@
     <div id="main">
 
         <div class="content">
-            <h2 class="content-subhead">planet</h2>
 
-            <div class="pure-g">
-                <div class="pure-u-1">
-                    <img class="pure-img" src="{% static 'galactic/solar_plant.jpg' %}" alt="By Sylwia Bartyzel from unsplash.com">
-                </div>
+            <p>&nbsp;</p>
+
+            <br>
+
+            <div class="pure-g showstuff">
+                <img class="pure-img" src="{% static 'galactic/planet.jpg' %}" alt="Planet">
             </div>
 
+            <p>&nbsp;</p>
 
-            <!-- HEADER -->
-            <h1>Planet</h1>
             <hr>
 
-            <h2>{{ planet }}</h2>
-            <ul>
+            <br>
+
+
+            <span class="showstuff" style="padding: 12px 25px; font-style: italic;">backlog</span>
+            <div class="pure-g showstuff">
+                <ul>
                 <li>Energy:
                     <ul>
                         <li>Balance: {{ planet.energy }}</li>
@@ -61,6 +65,8 @@
                     </ul>
                 </li>
             </ul>
+            </div>
+            
 
 
         </div>
