@@ -9,14 +9,15 @@
 <style>
 
 .container {
-  max-width: 960px; 
+  max-width: 860px; 
 }
 
 
 body {
   font-family: 'Courier New', monospace;
   background-color: #262847;
-  background-image: linear-gradient(130deg, #2E2E54 0%, #B0B3B0 50%, #BF98AC 75%);
+  /* background-image: linear-gradient(130deg, #2E2E54 0%, #B0B3B0 50%, #BF98AC 75%); */
+  background-color: #2E2E54;
 }
 
 
@@ -26,11 +27,17 @@ body {
 
 .apage {
 	color: #D8D8E6;
-    border-radius: 70px 70px 0px 0px;
+    border-radius: 35px 35px 0px 0px;
     
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
     border: 1px solid rgba(37, 41, 64, 0.3);
     background-color: #252940;
+
+}
+
+.offcanvas {
+	color: #D8D8E6;
+	background-color: #2E2E54;
 
 }
 
@@ -44,6 +51,34 @@ body {
 
 
 
+<nav class="navbar bg-body-tertiary fixed-top">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#"><!-- write logo here maybe? --></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">galactic</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
+
+
+
+
 
 <!-- HEADER SECTION BELOW -->
 <header>
@@ -51,9 +86,6 @@ body {
 <div class="px-3 py-2">
   <div class="container">
 	<div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-	  <a href="/" class="d-flex align-items-center my-2 my-lg-0 me-lg-auto text-decoration-none logo">
-        galactic
-	  </a>
 
 	  <ul class="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small">
 		<li>
@@ -67,6 +99,7 @@ body {
 		  </a>
 		</li>
 	  </ul>
+      
 	</div>
   </div>
 </div>
@@ -261,41 +294,12 @@ body {
   </div>
 
 
-and beyond
+... and beyond
 
 
     </div>
   </div>
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
