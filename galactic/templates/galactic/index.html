@@ -4,72 +4,44 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>galactic</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@700&display=swap" rel="stylesheet"> 
+
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 <style>
-
-.container {
-  max-width: 860px; 
-}
-
-
-body {
-  font-family: 'Courier New', monospace;
-  background-color: #262847;
-  /* background-image: linear-gradient(130deg, #2E2E54 0%, #B0B3B0 50%, #BF98AC 75%); */
-  background-color: #2E2E54;
-}
-
-
-.logo {
-	color: #D8D8E6;
-}
-
-.apage {
-	color: #D8D8E6;
-    border-radius: 35px 35px 0px 0px;
+	body { font-family: 'Inconsolata', monospace; background-color: #090909; color: white; font-size: 14pt;}
     
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
-    border: 1px solid rgba(37, 41, 64, 0.3);
-    background-color: #252940;
-
-}
-
-.offcanvas {
-	color: #D8D8E6;
-	background-color: #2E2E54;
-
-}
-
+    .minibadge { border: 1px solid #FFF; border-radius: 12px; padding: 2px 12px; font-size: 14px; }
+    
 </style>
-
-</head>
 <body>
-
 <!-- BODY SECTION BELOW -->
 
+<!-- MAIN SECTION BELOW -->
+<main>
 
 
-
-<nav class="navbar bg-body-tertiary fixed-top">
+<!-- NAVIGATION SECTION BELOW -->
+<nav class="navbar navbar-dark fixed-top" style="background-color: #090909;">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#"><!-- write logo here maybe? --></a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+    <a class="navbar-brand" href="#">galactic</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+    <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
       <div class="offcanvas-header">
-        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">galactic</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">navigation</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
       </div>
       <div class="offcanvas-body">
         <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-          </li>
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">planets</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">ressources</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">facilities</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">shipyard</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">defence</a></li>
         </ul>
       </div>
     </div>
@@ -77,233 +49,362 @@ body {
 </nav>
 
 
+<!-- SPACE -->
+<p>&nbsp;</p>
+<p>&nbsp;</p>
 
 
 
-<!-- HEADER SECTION BELOW -->
-<header>
+<!--PRIMARY SECTION BELOW -->
 
-<div class="px-3 py-2">
-  <div class="container">
-	<div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
 
-	  <ul class="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small">
-		<li>
-		  <a href="#" class="nav-link text-secondary">
-			<img src="https://i.pickadummy.com/60x60" alt="Energy" class="rounded-circle">
-		  </a>
-		</li>
-		<li>
-		  <a href="#" class="nav-link text-white">
-			<img src="https://i.pickadummy.com/60x60" alt="Energy" class="rounded-circle">
-		  </a>
-		</li>
-	  </ul>
-      
+
+<!-- GREEN BOX EXAMPLE BELOW -->
+<div class="container rounded-4 my-2" style="background-color: #B9FF67; color: #000001;">
+  <div class="py-4">
+    <div class="row">
+      <div class="col-7">
+      	<p style="margin-bottom: -20px; color: #648A29;">Your metaland identity</p></br><h3 style="font-size: 20pt;">0x9714...a1e67</h3>
+      </div>
+      <div class="col" style="text-align: right;">
+        <img src="https://i.pickadummy.com/60x60?colorize=B9FF67" alt="Energy" class="rounded-circle">
+        <img src="https://i.pickadummy.com/60x60" alt="Energy" class="rounded-circle">
+      </div>
+    </div>
+</div>
+</div>
+
+
+
+
+
+
+
+<!-- WHITE BOX EXAMPLE BELOW -->
+<div class="container rounded-4 my-2" style="background-color: #FFFFFF; color: #000001;">
+  <div class="py-4">
+    <div class="row">
+      <div class="col-4">
+      	<img src="https://i.pickadummy.com/60x60" class="rounded">
+      </div>
+      <div class="col" style="text-align: right;">
+      	<img src="https://i.pickadummy.com/60x60?greyscale=yes" alt="Energy" class="rounded-circle">
+        <img src="https://i.pickadummy.com/60x60?greyscale=yes" alt="Energy" class="rounded-circle">
+        <img src="https://i.pickadummy.com/60x60" alt="Energy" class="rounded-circle">
+      </div>
+    </div>
+    
+    <p>&nbsp;</p>
+    
+    <div class="row">
+      <div class="col-7">
+      	<h3 style="font-size: 20pt;">Now live in metaland</h3>
+      </div>
+      <div class="col" style="text-align: right;">
+        <p style="color: #648A29;">340.3K views</p>
+      </div>
+    </div>
+    
+
+    <div class="row rounded-4 p-4" style="background-color: #F7FAF7; margin-bottom: -24px; color: grey;">
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc hendrerit dolor ac nisl pharetra consequat. Orci varius natoque penatibus et magnis dis parturient montes.</p>
+    </div>
+    
+</div>
+</div>
+
+
+
+
+
+
+<!-- LIST OF ITEMS EXAMPLE BELOW -->
+<div class="container rounded-4 my-2" style="background-color: #806DFF; color: #FFFFFF">
+<div class="py-4">
+  
+    <div class="row">
+      <div class="col">&nbsp;</div>
+      <div class="col" style="text-align: right;">
+        <img src="https://i.pickadummy.com/60x60?colorize=B9FF67&greyscale=yes"class="rounded-circle">
+        <img src="https://i.pickadummy.com/60x60" class="rounded-circle">
+      </div>
+    </div>
+    
+    <p>&nbsp;</p>
+    
+    
+    <!-- ROW 1 -->
+    <hr>
+    
+     <div class="row">
+      <div class="col-9">
+      	<h3 style="font-size: 20pt;">Hey mate can we go</h3>
+      </div>
+      <div class="col" style="text-align: right;">
+        <img src="https://i.pickadummy.com/25x25?colorize=B9FF65" class="rounded-circle">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-9">
+      	<p>Lets go</p>
+      </div>
+      <div class="col" style="text-align: right;">
+        <span class="minibadge">Light</span>
+      </div>
+    </div>
+    
+    
+    <!-- ROW 2 -->
+    <hr>
+    
+     <div class="row">
+      <div class="col-9">
+      	<h3 style="font-size: 20pt;">So now you see then things</h3>
+      </div>
+      <div class="col" style="text-align: right;">
+        <img src="https://i.pickadummy.com/25x25?colorize=B9FF65" class="rounded-circle">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-9">
+      	<p>Is right in front of you</p>
+      </div>
+      <div class="col" style="text-align: right;">
+        <span class="minibadge">Light</span>
+      </div>
+    </div>
+    
+    
+    <!-- ROW 3 -->
+    <hr>
+    
+     <div class="row">
+      <div class="col-9">
+      	<h3 style="font-size: 20pt;">That you can not let go</h3>
+      </div>
+      <div class="col" style="text-align: right;">
+        <img src="https://i.pickadummy.com/25x25?colorize=B9FF65" class="rounded-circle">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-9">
+      	<p>What are you waiting for?</p>
+      </div>
+      <div class="col" style="text-align: right;">
+        <span class="minibadge">Light</span>
+      </div>
+    </div>
+    
+    
+    <!-- ROW 4 -->
+    <hr>
+    
+     <div class="row">
+      <div class="col-9">
+      	<h3 style="font-size: 20pt;">So now you see then things</h3>
+      </div>
+      <div class="col" style="text-align: right;">
+        <img src="https://i.pickadummy.com/25x25?colorize=B9FF65" class="rounded-circle">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-9">
+      	<p>Is right in front of you</p>
+      </div>
+      <div class="col" style="text-align: right;">
+        <span class="minibadge">Light</span>
+      </div>
+    </div>
+    
+    
+</div>
+</div>
+
+
+
+
+
+
+<!-- PURPLE BOX EXAMPLE BELOW -->
+<div class="container rounded-4 my-2" style="background-color: #FFC4DD; color: #000001;">
+	<div class="bg-body-tertiary p-0">
+		<div class="col-sm-8 py-5 mx-auto">
+			<h1 class="display-5 fw-normal">Navbar with offcanvas examples</h1>
+			<p class="fs-5">This example shows how responsive offcanvas menus work within the navbar. For positioning of navbars, checkout the top and fixed top examples.</p>
+			<p>From the top down, you'll see a dark navbar, light navbar and a responsive navbar—each with offcanvases built in. Resize your browser window to the large breakpoint to see the toggle for the offcanvas.</p>
+          <div class="row">
+            <div class="col-9">
+              <p>What are you waiting for?</p>
+            </div>
+            <div class="col" style="text-align: right;">
+              <span class="minibadge">Light</span>
+            </div>
+          </div>
+		</div>
+        
+        <p>&nbsp;</p>
+
+      <div class="row rounded-4 p-4" style="background-color: #FFE1EE; color: grey;">
+      <div class="row">
+          <div class="col">
+            <img src="https://i.pickadummy.com/25x25?colorize=813A58" class="rounded-circle">
+            <span>This is a subtitle</span>
+          </div>
+        </div>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc hendrerit dolor ac nisl pharetra consequat. Orci varius natoque penatibus et magnis dis parturient montes.</p>
+      </div>
+
 	</div>
-  </div>
-</div>
-</header>
-
-
-<!-- CONTENT -->
-
-<div class="my-1 apage">
-  <div class="p-1 text-center bg-body-tertiary">
-    <div class="container py-1">
-    
-    
-    
-
-
-<div class="container px-4 py-5">
-
-
-
-
-<div class="row row-cols-1 row-cols-lg-1 align-items-stretch g-4 py-5">
-      <div class="col">
-        <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-image: url('https://i.pickadummy.com/650x550');">
-          <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
-            <h6 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Short title, long jacket</h6>
-            <ul class="d-flex list-unstyled mt-auto">
-              <li class="me-auto">
-                <img src="https://github.com/twbs.png" alt="Bootstrap" class="rounded-circle border border-white" width="32" height="32">
-              </li>
-              <li class="d-flex align-items-center me-3">
-                <img src="https://i.pickadummy.com/16x16" alt="Energy" class="rounded-circle">
-                <small>Earth</small>
-              </li>
-              <li class="d-flex align-items-center">
-                <img src="https://i.pickadummy.com/16x16" alt="Energy" class="rounded-circle">
-                <small>3d</small>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
- </div>
- 
- 
- 
- 
- 
- 
- 
- 
-
-
-
-<div class="container px-4 py-5" id="featured-3">
-
-	<div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
-      <div class="feature col">
-        <img src="https://i.pickadummy.com/40x40" alt="Energy" class="rounded">
-        <h3 class="fs-2 text-body-emphasis">Featured title</h3>
-        <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
-      </div>
-      <div class="feature col">
-        <img src="https://i.pickadummy.com/40x40" alt="Energy" class="rounded">
-        <h3 class="fs-2 text-body-emphasis">Featured title</h3>
-        <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
-      </div>
-      <div class="feature col">
-        <img src="https://i.pickadummy.com/40x40" alt="Energy" class="rounded">
-        <h3 class="fs-2 text-body-emphasis">Featured title</h3>
-        <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
-      </div>
-    </div>
-  </div>
-  
-  
-  
-  
- 
-
-
-
-    <div class="row row-cols-1 row-cols-md-2 align-items-md-center g-5 py-5">
-      <div class="col d-flex flex-column align-items-start gap-2">
-        <h2 class="fw-bold text-body-emphasis">Left-aligned title explaining these awesome features</h2>
-        <p class="text-body-secondary">Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
-      </div>
-
-      <div class="col">
-        <div class="row row-cols-1 row-cols-sm-2 g-4">
-          <div class="col d-flex flex-column gap-2">
-            <h4 class="fw-semibold mb-0 text-body-emphasis">Featured title</h4>
-            <p class="text-body-secondary">Paragraph of text beneath the heading to explain the heading.</p>
-          </div>
-
-          <div class="col d-flex flex-column gap-2">
-            <h4 class="fw-semibold mb-0 text-body-emphasis">Featured title</h4>
-            <p class="text-body-secondary">Paragraph of text beneath the heading to explain the heading.</p>
-          </div>
-
-          <div class="col d-flex flex-column gap-2">
-            <h4 class="fw-semibold mb-0 text-body-emphasis">Featured title</h4>
-            <p class="text-body-secondary">Paragraph of text beneath the heading to explain the heading.</p>
-          </div>
-
-          <div class="col d-flex flex-column gap-2">
-            <h4 class="fw-semibold mb-0 text-body-emphasis">Featured title</h4>
-            <p class="text-body-secondary">Paragraph of text beneath the heading to explain the heading.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-
-
-
-
-
-
-
-
-
-
-<div class="container px-4 py-5" id="custom-cards" style="color: #FFF;">
-
-
-    <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
-      <div class="col">
-        <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-image: url('https://i.pickadummy.com/650x550');">
-          <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
-            <h6 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Short title, long jacket</h6>
-            <ul class="d-flex list-unstyled mt-auto">
-              <li class="me-auto">
-                <img src="https://github.com/twbs.png" alt="Bootstrap" class="rounded-circle border border-white" width="32" height="32">
-              </li>
-              <li class="d-flex align-items-center me-3">
-                <img src="https://i.pickadummy.com/16x16" alt="Energy" class="rounded-circle">
-                <small>Earth</small>
-              </li>
-              <li class="d-flex align-items-center">
-                <img src="https://i.pickadummy.com/16x16" alt="Energy" class="rounded-circle">
-                <small>3d</small>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <div class="col">
-        <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-image: url('https://i.pickadummy.com/650x550');">
-          <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
-            <h6 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Much longer title that wraps to multiple lines</h6>
-            <ul class="d-flex list-unstyled mt-auto">
-              <li class="me-auto">
-                <img src="https://github.com/twbs.png" alt="Bootstrap" class="rounded-circle border border-white" width="32" height="32">
-              </li>
-              <li class="d-flex align-items-center me-3">
-                <img src="https://i.pickadummy.com/16x16" alt="Energy" class="rounded-circle">
-                <small>Pakistan</small>
-              </li>
-              <li class="d-flex align-items-center">
-                <img src="https://i.pickadummy.com/16x16" alt="Energy" class="rounded-circle">
-                <small>4d</small>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <div class="col">
-        <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-image: url('https://i.pickadummy.com/650x550');">
-          <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
-            <h6 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Another longer title belongs here</h6>
-            <ul class="d-flex list-unstyled mt-auto">
-              <li class="me-auto">
-                <img src="https://github.com/twbs.png" alt="Bootstrap" class="rounded-circle border border-white" width="32" height="32">
-              </li>
-              <li class="d-flex align-items-center me-3">
-                <img src="https://i.pickadummy.com/16x16" alt="Energy" class="rounded-circle">
-                <small>California</small>
-              </li>
-              <li class="d-flex align-items-center">
-                <img src="https://i.pickadummy.com/16x16" alt="Energy" class="rounded-circle">
-                <small>5d</small>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-
-... and beyond
-
-
-    </div>
-  </div>
 </div>
 
 
 
 
+
+<!-- SINGLE LINE EXAMPLE BELOW -->
+<div class="container rounded-4 my-2" style="background-color: #806DFF; color: #000001;">
+	<div class="bg-body-tertiary p-0">
+		<div class="col-sm-16 py-2 mx-auto">
+			This is a single line
+		</div>
+	</div>
+</div>
+
+
+
+
+<!-- GREEN BOX EXAMPLE BELOW -->
+<div class="container rounded-4 my-2" style="background-color: #B9FF67; color: #000001;">
+  <div class="py-4">
+    <div class="row">
+      <div class="col-7">
+      	<p style="margin-bottom: -20px; color: #648A29;">Your metaland identity</p></br><h3 style="font-size: 20pt;">0x9714...a1e67</h3>
+      </div>
+      <div class="col" style="text-align: right;">
+        <img src="https://i.pickadummy.com/60x60?colorize=B9FF67" alt="Energy" class="rounded-circle">
+        <img src="https://i.pickadummy.com/60x60" alt="Energy" class="rounded-circle">
+      </div>
+    </div>
+</div>
+</div>
+
+
+
+
+
+
+
+<!-- WHITE BOX WITH IMAGES EXAMPLE BELOW -->
+<div class="container rounded-4 my-2" style="background-color: #FFFFFF; color: #000001;">
+  <div class="py-4">
+    <div class="row">
+      <div class="col-4">
+      	<img src="https://i.pickadummy.com/60x60" class="rounded">
+      </div>
+      <div class="col" style="text-align: right;">
+      	<img src="https://i.pickadummy.com/60x60?greyscale=yes" alt="Energy" class="rounded-circle">
+        <img src="https://i.pickadummy.com/60x60?greyscale=yes" alt="Energy" class="rounded-circle">
+        <img src="https://i.pickadummy.com/60x60" alt="Energy" class="rounded-circle">
+      </div>
+    </div>
+    
+    <p>&nbsp;</p>
+    
+    <div class="row">
+      <div class="col-7">
+      	<h3 style="font-size: 20pt;">Now live in metaland</h3>
+      </div>
+      <div class="col" style="text-align: right;">
+        <p style="color: #648A29;">340.3K views</p>
+      </div>
+    </div>
+    
+    
+    <div class="bg-body-tertiary p-0">
+		<div class="card shadow-sm">
+			<img src="https://i.pickadummy.com/400x160" class="rounded">
+		</div>
+	</div>
+    
+    
+    <p>&nbsp;</p>
+
+    <div class="row rounded-4 p-4" style="background-color: #F7FAF7; margin-bottom: -24px; color: grey;">
+    <div class="row">
+      <div class="col">
+        <img src="https://i.pickadummy.com/25x25?colorize=B9FF65" class="rounded-circle">
+        <span>This is a subtitle</span>
+      </div>
+    </div>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc hendrerit dolor ac nisl pharetra consequat. Orci varius natoque penatibus et magnis dis parturient montes.</p>
+    </div>
+    
+    <div class="row rounded-4 p-4" style="background-color: #EAEAEA; margin-bottom: -24px; color: #515151;">
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc hendrerit dolor ac nisl pharetra consequat. Orci varius natoque penatibus et magnis dis parturient montes.</p>
+    </div>
+    
+    <div class="row rounded-4 p-4" style="background-color: #D3D3D3; margin-bottom: -24px; color: #515151;">
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc hendrerit dolor ac nisl pharetra consequat. Orci varius natoque penatibus et magnis dis parturient montes.</p>
+    </div>
+    
+    
+    <div class="row rounded-4 p-4" style="background-color: #C2C2C2; margin-bottom: -24px; color: #1c1c1c;">
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc hendrerit dolor ac nisl pharetra consequat. Orci varius natoque penatibus et magnis dis parturient montes.</p>
+    </div>
+    
+</div>
+</div>
+
+
+
+
+
+<!-- GREEN BOX EXAMPLE BELOW -->
+<div class="container rounded-4 my-2" style="background-color: #B9FF67; color: #000001;">
+  <div class="py-4">
+    <div class="row">
+      <div class="col-7">
+      	<p style="margin-bottom: -20px; color: #648A29;">Your metaland identity</p></br><h3 style="font-size: 20pt;">0x9714...a1e67</h3>
+      </div>
+      <div class="col" style="text-align: right;">
+        <img src="https://i.pickadummy.com/60x60?colorize=B9FF67" alt="Energy" class="rounded-circle">
+        <img src="https://i.pickadummy.com/60x60" alt="Energy" class="rounded-circle">
+      </div>
+    </div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+<!-- GREEN BOX EXAMPLE BELOW -->
+<div class="container rounded-4 my-2" style="background-color: green;">
+	<div class="bg-body-tertiary p-0">
+		<div class="col-sm-8 py-5 mx-auto">
+			<h1 class="display-5 fw-normal">Navbar with offcanvas examples</h1>
+			<p class="fs-5">This example shows how responsive offcanvas menus work within the navbar. For positioning of navbars, checkout the top and fixed top examples.</p>
+			<p>From the top down, you'll see a dark navbar, light navbar and a responsive navbar—each with offcanvases built in. Resize your browser window to the large breakpoint to see the toggle for the offcanvas.</p>
+		</div>
+	</div>
+</div>
+
+
+
+
+<!-- FOOTER SECTION BELOW -->
+HELLO
+
+
+
+<!-- MAIN SECTION ENDS HERE -->
+</main>
+
+
+<!-- FINAL SCRIPT -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
 </body>
 </html>
