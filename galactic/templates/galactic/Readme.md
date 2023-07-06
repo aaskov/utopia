@@ -2,7 +2,7 @@
 
 ## green box
 
-![green box](/img/galactic-green-box.png)
+![green box](galactic/templates/galactic/img/galactic-green-box.png)
 
 ```html
 <div class="container rounded-4 my-2 galactic-green-box">
