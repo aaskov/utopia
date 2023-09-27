@@ -1,4 +1,13 @@
-Galactic Utopia
-===============
+# utopia
+Utopia Galactic (a Ogam clone)
+![design](galactic/templates/galactic/img/frame_chrome_mac_dark.png)
 
-This name suggests the goal of creating a perfect society in the vastness of space, focusing on resource management and peaceful expansion, while still allowing for defensive or offensive actions against hostile forces.
+
+### Concept
+A browser turn-based strategy game.
+
+### Design and implementation
+Python3 with Django
+
+### To-do
+- Where do I even begin...
